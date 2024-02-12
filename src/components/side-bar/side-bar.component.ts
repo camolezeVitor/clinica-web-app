@@ -4,13 +4,13 @@ import { SideBarSection } from "../../models/side-bar-section.model";
 import { TooltipModule } from 'primeng/tooltip';
 import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
-import { ActivatedRoute, Router } from "@angular/router";
+import { Router, RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 
 @Component({
     standalone: true,
     selector: "side-bar",
-    imports: [TooltipModule, AccordionModule, ButtonModule, CommonModule],
+    imports: [TooltipModule, AccordionModule, ButtonModule, CommonModule, RouterModule],
     template: `
     <div class="side-bar">
         <!-- Header !-->
@@ -24,7 +24,7 @@ import { CommonModule } from "@angular/common";
                 <p-accordionTab header="{{tab.title}}" iconPos="start" [selected]="true">
                     <div style="display: flex; flex-direction: column; gap: 10px;">
                         @for (button of tab.buttons; track $index) {
-                            <button class="btn" [ngClass]="{'btn-selected': verificarRota('a')}">{{button.title}}</button>
+                            <button class="btn" routerLink="{{button.route}}" [ngClass]="{'btn-selected': verificarRota(button.route)}">{{button.title}}</button>
                         }
                     </div>
                 </p-accordionTab>   
@@ -41,7 +41,13 @@ export class SideBarComponent {
 
     }
 
-    public verificarRota(route: string) {
+    public verificarRota(route: string): boolean {
+        console.log(route);
         console.log(this.router.url)
+        if (this.router.url == route) {
+            return true;
+        }
+
+        return false;
     }
 }
