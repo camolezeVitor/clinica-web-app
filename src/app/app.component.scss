@@ -1,0 +1,12 @@
+.group {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.conteudo {
+    flex: 1;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}

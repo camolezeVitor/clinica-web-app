@@ -1,0 +1,69 @@
+@import '../../styles.scss';
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+    height: 100%;
+    background-color: $background-300;
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.354);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-right: 2px solid $border-color;
+    border-bottom: 2px solid $border-color;
+    border-top: 2px solid $border-color;
+}
+
+.side-bar-header {
+    height: 100px;
+    width: 100%;
+}
+
+.logo-img {
+    scale: 0.4;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons {
+    overflow-y: auto;
+    flex-grow: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+.container-header {
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.container-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+} 
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.5s;
+    cursor: pointer;
+    text-align: start;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-selected {
+    background-color: #04A777;
+    box-shadow: 0px 3px 4px 4px black;
+}

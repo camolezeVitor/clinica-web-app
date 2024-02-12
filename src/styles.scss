@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/mdc-dark-indigo/theme.css";
+@import "primeng/resources/primeng.css";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+$border-color: #343434;
+$background-200: #1B1B1B;
+$background-300: #121212;
+$primary: #34D399;
+
+*:not(i) {
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $background-200;
+    height: 100vh;
+    font-family: "Quicksand", sans-serif;
+}
+
+.centralize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $border-color;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff3d;
+}
